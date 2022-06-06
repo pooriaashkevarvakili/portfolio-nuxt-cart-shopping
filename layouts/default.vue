@@ -1,5 +1,5 @@
 <template>
-  <v-app secondary>
+  <v-app>
 
     <v-app-bar fixed app>
       <router-link :to="{ name: 'index' }" class="white--text" style="cursor:pointer;text-decoration: none;">
@@ -8,13 +8,11 @@
 
 
       <v-spacer />
-      <div style="cursor:pointer">
+      <router-link :to="{ name: 'login' }" class="white--text " style="cursor:pointer;text-decoration: none;">
         login
-      </div>
-      <div class="ml-3" style="cursor:pointer">
-        register
-      </div>
-      <v-btn class="ml-2" style="cursor:pointer">checkout</v-btn>
+      </router-link>
+
+      <v-btn class="ml-4 green" :to="{ name: 'cart' }" style="cursor:pointer">checkout</v-btn>
     </v-app-bar>
     <v-main>
       <v-container>
@@ -54,7 +52,7 @@ export default {
   }
 }
 </script>
-<style>
+<style >
 .theme--dark.v-application {
   background: #fff;
   color: #FFFFFF;
