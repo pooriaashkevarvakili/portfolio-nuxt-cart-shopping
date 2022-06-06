@@ -1,58 +1,53 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <v-card class="logo py-4 d-flex justify-center">
-        <NuxtLogo />
-        <VuetifyLogo />
-      </v-card>
-      <v-card>
-        <v-card-title class="headline">
-          {{ $store.state.todo }}
-        </v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower
-            developers to create amazing applications.</p>
-          <p>
-            For more information on Vuetify, check out the <a href="https://vuetifyjs.com" target="_blank"
-              rel="noopener noreferrer">
-              documentation
-            </a>.
-          </p>
-          <p>
-            If you have questions, please join the official <a href="https://chat.vuetifyjs.com/" target="_blank"
-              rel="noopener noreferrer" title="chat">
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a href="https://github.com/vuetifyjs/vuetify/issues" target="_blank"
-              rel="noopener noreferrer" title="contribute">
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.
-          </p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
+  <v-app>
+    <v-row class="mt-3">
+
+
+      <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12 h-12">
+
+
+        <v-card height="72%">
+          <v-row justify="center">
+
+
+            <v-img max-height="100" max-width="180" src="img9.jpg" style="width:230px;height:170px" alt="">
+            </v-img>
+          </v-row>
+
+
+          <div class="black--text mt-16 ">
+            <div class="ml-6">
+              macbook Retina 13.3' ME662 (2013)
+            </div>
+            <div class="ml-6 mt-2">
+              10 left in stock </div>
+            <div class="ml-6 mt-3">
+              2.9 Ghz Dual-Core Intel Core i5 Broadwell Tubro boost up to 3.3 GHz with L3 3MB cache</div>
           </div>
-          <hr class="my-3">
-          <a href="https://nuxtjs.org/" target="_blank" rel="noopener noreferrer">
-            Nuxt Documentation
-          </a>
-          <br>
-          <a href="https://github.com/nuxt/nuxt.js" target="_blank" rel="noopener noreferrer">
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn color="primary" nuxt to="/inspire">
-            Continue
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-col>
-  </v-row>
+          <v-container>
+
+            <v-row class="mt-10">
+              <div class="black--text ml-5 ">
+                $2399
+
+              </div>
+              <v-spacer />
+              <v-btn :to="{ name: 'cart' }" class="mr-5 green">add to cart</v-btn>
+            </v-row>
+          </v-container>
+        </v-card>
+      </div>
+      <div class=" col-md-4 col-lg-4 col-xs-12 col-sm-12">
+
+
+        <v-card height="50%">
+          <div>mohamad</div>
+          <div>ali</div>
+        </v-card>
+      </div>
+    </v-row>
+  </v-app>
+
 </template>
 
 <script>
@@ -60,3 +55,9 @@ export default {
   name: 'IndexPage'
 }
 </script>
+<style>
+.theme--dark.v-card {
+  background-color: #fff;
+  /* color: #FFFFFF; */
+}
+</style>
